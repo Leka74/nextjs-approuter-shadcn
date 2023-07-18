@@ -1,7 +1,8 @@
 import Image from 'next/image'
-import { getTime}  from "../lib/utils"
+import { getTime, delay }  from "../lib/utils"
 
 export default async function Home() {
+  await delay(2000);
   const date = await getTime();
   console.log("Server side render", date as string);
   

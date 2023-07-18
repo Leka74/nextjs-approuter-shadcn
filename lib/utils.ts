@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-const delay = (ms: number) => {
+export const delay = (ms: number) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(true);
@@ -15,7 +15,6 @@ const delay = (ms: number) => {
 
 export const getTime = () => {
   return new Promise(async (resolve) => {
-    await delay(2000);
     resolve(new Date().toLocaleString());
   });
 }

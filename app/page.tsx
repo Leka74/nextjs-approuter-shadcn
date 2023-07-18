@@ -1,13 +1,9 @@
 import Image from 'next/image'
-
-const getTime = () => {
-  return new Promise((resolve) => {
-    resolve(new Date().toLocaleString());
-  });
-}
+import { getTime}  from "../lib/utils"
 
 export default async function Home() {
   const date = await getTime();
+  console.log("Server side render", date as string);
   
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">

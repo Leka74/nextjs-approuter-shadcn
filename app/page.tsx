@@ -6,7 +6,7 @@ const getTime = () => {
   });
 }
 
-export default function Home() {
+export default async function Home() {
   const date = await getTime();
   
   return (
